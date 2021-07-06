@@ -7,6 +7,6 @@ for _ in range(n // 2):
     print("+-", end='')  # +-를 n//2개의 출력
 
 if n % 2:
-    print('+-', end='')  # n이 홀수일때만 +를 출력
+    print('+', end='')  # n이 홀수일때만 +를 출력
 
 print()
