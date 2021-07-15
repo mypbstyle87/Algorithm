@@ -29,9 +29,16 @@
 # num = int(input())
 # print(fibonaci_list[num])
 
+
+# 재귀로 하면 아주 '논리적'으로 전개 가능^^
 def calc_fibonaci(n):
+    if n == 0:  # 예외처리 1
+        return 0
+    if n == 1:  # 예외처리 2
+        return 1
+    if n >= 2:  # 말 그대로 피보나치를 만들면 된다!
+        return calc_fibonaci(n - 1) + calc_fibonaci(n - 2)
 
 
 num = int(input())
-
-
+print(calc_fibonaci(num))
