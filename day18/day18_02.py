@@ -1,0 +1,7 @@
+list01=list('abc')
+list02=list([1,2,3])
+print(list01)
+print(len(list02))
+tuple01=tuple('abc')
+print(tuple01)
+print([1,2,3]*4)
