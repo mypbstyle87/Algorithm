@@ -36,18 +36,20 @@
 # win_nums의 원소들은 정렬되어 있지 않을 수도 있습니다.
 
 def solution(lottos, win_nums):
+    def cal_prize(a):
+        if a == 0:
+            return 6
+        else:
+            return 7 - a # 순위 리턴(0개 맞춘 경우 제외하고는 맞춘갯수 + 순위 = 7로 일정
 
-    lottos.sort()
-    win_nums.sort()
-    count_zero=lottos.count(0)
-    for _ in range(count_zero):
-        lottos.pop(0)
-    for _ in range(0,6)
+    count_zero = lottos.count(0) # 0 갯수 기억
+    temp = set(lottos) # 중복제거 좋은 방법
+    lottos = list(temp)
+    if 0 in lottos:
+        lottos.remove(0) # 0이 있는 경우 제거(최소순위 계산 위해)
+    count = 0
+    for i in lottos:
+        if i in win_nums:
+            count += 1 # 최소순위 계산
 
-
-
-
-
-    answer = []
-
-    return answer
+    return [cal_prize(count + count_zero), cal_prize(count)] # 0 갯수만큼 등수 상승 가능, 최소순위
