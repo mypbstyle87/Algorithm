@@ -7,3 +7,4 @@ print(a(3,4))
 b = [ -1, -8, 3, -4, 2, 5, -7]
 b.sort(key=lambda x : x*x,reverse=True)
 print(b)
+
