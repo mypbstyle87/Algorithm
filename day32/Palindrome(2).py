@@ -1,0 +1,20 @@
+import collections
+from typing import Deque
+
+
+def isPalindrome(s: str) -> bool:
+    # declare data type deque
+    strs: Deque = collections.deque()
+
+    for char in s:
+        if char.isalnum():
+            strs.append(char.lower())
+
+    while len(strs) > 1:
+        if strs.popleft() != strs.pop():
+            return False
+
+    return True
+
+s = input()
+print(isPalindrome(s))
